@@ -1,11 +1,11 @@
 <template>
   <div>
     <h1>Nuxt.js</h1> 
-    <button @click="goMyVue1">go to {{myVue1}}</button>
-    <button @click="goMyVue2">go to {{myVue2}}</button>
-    <button @click="goMyVue3">go to {{myVue3}}</button>
-    <button @click="goMyVue4">go to {{myVue4}}</button>
-    <button @click="goMyVue5">go to {{myVue5}}</button>
+    <button class="btnMyVue" @click="goMyVue1">go to {{myVue1}}</button>
+    <button class="btnMyVue" @click="goMyVue2">go to {{myVue2}}</button>
+    <button class="btnMyVue" @click="goMyVue3">go to {{myVue3}}</button>
+    <button class="btnMyVue" @click="goMyVue4">go to {{myVue4}}</button>
+    <button class="btnMyVue" @click="goMyVue5">go to {{myVue5}}</button>
   </div>
 </template>
 
@@ -39,3 +39,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .btnMyVue {
+    background : #000;
+    color : #fff;
+    border-radius: 30px;
+    transition : transform 0.3s ease;
+  }
+</style>

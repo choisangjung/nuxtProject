@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Welcome to {{ myVue1 }}</h1> 
     <button @click="goHOME">go to {{home}}</button>
     <ul>
         <li v-for="item in list" v-bind:key="item">

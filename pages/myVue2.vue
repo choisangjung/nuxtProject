@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h1>Welcome to {{ title2 }}</h1> 
+      <h1>Welcome to {{ myVue2 }}</h1> 
       <button @click="goHOME">go to {{home}}</button>
       <input type="text" v-model="input1" />
       <button type="button" @click="getData">GET</button>
@@ -26,8 +26,6 @@
 export default {
   data() {
     return {
-      title1: "title1",
-      title2: "title2",
       input1: "abcd",
       options: [
         { v: "S", t: "Seoul" },
