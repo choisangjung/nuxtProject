@@ -25,9 +25,10 @@ export default {
       proxy: true
     },
     proxy: {
-      '/api': {
-        target: 'http://localhost:3001/',
-        changeOrigin: true // cross origin 허용
+      '/api/': {
+        target: 'http://localhost:3080',
+        changeOrigin: true, // cross origin 허용
+        ws : true
       }
     }
   },
