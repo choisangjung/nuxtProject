@@ -1,6 +1,5 @@
 <template>
   <div>
-    <button @click="GOHOME">GOHOME2</button>
     <ul>
         <li v-for="item in list" v-bind:key="item">
         {{item}}
@@ -15,11 +14,6 @@ export default{
         return {
             list : ['mine','it','record']
         }
-    },
-    methods: {
-    GOHOME(){
-      this.$router.push("/HOME2");
     }
-  },
 }
 </script>

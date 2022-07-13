@@ -1,17 +1,12 @@
 <template>
   <div>
     <div>
-      <h1>Welcome to {{ title2 }}</h1>
+      <h1>Welcome to {{ title2 }}</h1> <button @click="GOHOME">go</button>
       <input type="text" v-model="input1" />
       <button type="button" @click="getData">GET</button>
       <button type="button" @click="setData">SET</button>
     </div>
     <div>
-      <ul>
-        <li id="myVue" v-for="item in list" v-bind:key="item">
-          {{item}}
-        </li>
-      </ul>
       <select class="form-control">
         <option :key="i" :value="d.v" v-for="(d, i) in options">
           {{ d.t }}
@@ -27,12 +22,6 @@
 </template>
 
 <script>
-new Vue({
-  el: '#myVue',
-  data: {
-    list : ['Seoul','Busan','Daegu']
-  }
-});
 export default {
   data() {
     return {
@@ -48,6 +37,9 @@ export default {
     };
   },
   methods: {
+    GOHOME(){
+      this.$router.push("/HOME");
+    },
     getData() {
       alert(this.input1);
     },

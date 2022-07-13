@@ -15,7 +15,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     server: {
-      port: 3001
+      port: 3000
     },
     module: [
       '@nuxtjs/axios',
