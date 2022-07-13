@@ -1,23 +1,11 @@
 <template>
   <div>
-    <div>
-      <h1>Welcome to {{ title2 }}</h1> <button @click="GOHOME">go</button>
-      <input type="text" v-model="input1" />
-      <button type="button" @click="getData">GET</button>
-      <button type="button" @click="setData">SET</button>
-    </div>
-    <div>
-      <select class="form-control">
-        <option :key="i" :value="d.v" v-for="(d, i) in options">
-          {{ d.t }}
-        </option>
-      </select>
-      <select class="form-control" v-model="region">
-        <option :key="i" :value="d.v" v-for="(d, i) in options">
-          {{ d.t }}
-        </option>
-      </select>
-    </div>
+    <h1>Nuxt.js</h1> 
+    <button @click="goMyVue1">go to {{myVue1}}</button>
+    <button @click="goMyVue2">go to {{myVue2}}</button>
+    <button @click="goMyVue3">go to {{myVue3}}</button>
+    <button @click="goMyVue4">go to {{myVue4}}</button>
+    <button @click="goMyVue5">go to {{myVue5}}</button>
   </div>
 </template>
 
@@ -25,51 +13,29 @@
 export default {
   data() {
     return {
-      title1: "title1",
-      title2: "title2",
-      input1: "abcd",
-      options: [
-        { v: "S", t: "Seoul" },
-        { v: "J", t: "Jeju" },
-        { v: "B", t: "Busan" },
-      ],
-      region: "J",
-    };
+      myVue1 : "myVue1",
+      myVue2 : "myVue2",
+      myVue3 : "myVue3",
+      myVue4 : "myVue4",
+      myVue5 : "myVue5",
+    }
   },
   methods: {
-    GOHOME(){
-      this.$router.push("/HOME");
+    goMyVue1(){
+      this.$router.push("/myVue1");
     },
-    getData() {
-      alert(this.input1);
+    goMyVue2(){
+      this.$router.push("/myVue2");
     },
-    setData() {
-      this.input1 = "123123123123";
+    goMyVue3(){
+      this.$router.push("/myVue3");
     },
-  },
-  beforeCreate() {
-    console.log("beforeCreate");
-  },
-  created() {
-    console.log("created");
-  },
-  beforeMount() {
-    console.log("beforeMount");
-  },
-  mounted() {
-    console.log("mounted");
-  },
-  beforeUpdate() {
-    console.log("beforeUpdate");
-  },
-  updated() {
-    console.log("updated");
-  },
-  beforeDestroy() {
-    console.log("beforeDestroy");
-  },
-  destroyed() {
-    console.log("destroyed");
-  },
-};
+    goMyVue4(){
+      this.$router.push("/myVue4");
+    },
+    goMyVue5(){
+      this.$router.push("/myVue5");
+    },
+  }
+}
 </script>
