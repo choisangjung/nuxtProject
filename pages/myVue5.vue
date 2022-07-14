@@ -28,6 +28,8 @@ export default {
 <style scoped>
   .btn {
     text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.25rem;
     position: relative;
   }
 
@@ -35,7 +37,7 @@ export default {
     overflow: hidden;
     color: #fff;
     border-radius: 30px;
-    box-shadow: 0 0 0 0 rgba(143, 64, 648, 0.5), 0 0 0 0;
+    box-shadow: 0 0 0 0 rgba(143, 64, 648, 0.5),10px -10px 25px 0 rgba(39, 200, 255, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 

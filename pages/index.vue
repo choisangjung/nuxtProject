@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1>Nuxt.js</h1> 
-    <button class="btnMyVue" @click="goMyVue1">go to {{myVue1}}</button>
-    <button class="btnMyVue" @click="goMyVue2">go to {{myVue2}}</button>
-    <button class="btnMyVue" @click="goMyVue3">go to {{myVue3}}</button>
-    <button class="btnMyVue" @click="goMyVue4">go to {{myVue4}}</button>
-    <button class="btnMyVue" @click="goMyVue5">go to {{myVue5}}</button>
+    <h1>{{main}}</h1>
+    <button class="btn btnMyVue" @click="goMyVue1">go to {{myVue1}}</button>
+    <button class="btn btnMyVue" @click="goMyVue2">go to {{myVue2}}</button>
+    <button class="btn btnMyVue" @click="goMyVue3">go to {{myVue3}}</button>
+    <button class="btn btnMyVue" @click="goMyVue4">go to {{myVue4}}</button>
+    <button class="btn btnMyVue" @click="goMyVue5">go to {{myVue5}}</button>
   </div>
 </template>
 
@@ -18,6 +18,7 @@ export default {
       myVue3 : "myVue3",
       myVue4 : "myVue4",
       myVue5 : "myVue5",
+      main : "NUXT.js",
     }
   },
   methods: {
@@ -46,5 +47,16 @@ export default {
     color : #fff;
     border-radius: 30px;
     transition : transform 0.3s ease;
+  }
+
+  .btn {
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.25rem;
+    position: relative;
+  }
+  .btn:hover{
+    cursor: pointer;
+    transform: translateY(-0.25em);
   }
 </style>
