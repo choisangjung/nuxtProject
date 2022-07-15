@@ -36,10 +36,7 @@ export default {
         { text: "비고", align: "center", sortable: false, value: "note" }, 
         { text: "삭제FLAG", align: "center", sortable: false, value: "delflag", },
       ],
-      contents: [],
-      items : "",
-      editedIndex : "",
-      editedItem : "",
+      contents: []
     };
   },
   methods: {
@@ -51,7 +48,6 @@ export default {
         .get("http://localhost:3080/api/GETPRCOALIST")
         .then((res) => {
           this.contents = res.data;
-          this.items = res.data;
         });
     },
   },
