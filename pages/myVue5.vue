@@ -11,11 +11,6 @@
         </tr>
       </table>
     </div>
-    <v-card dark>
-    <v-responsive :aspect-ratio="16/9">
-      <p>Vuetify</p>
-    </v-responsive>
-  </v-card>
   </div>
 </template>
 

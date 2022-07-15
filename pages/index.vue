@@ -8,6 +8,7 @@
       <button class="btn btnMyVue" @click="goMyVue4">go to myVue4 </button>
       <button class="btn btnMyVue" @click="goMyVue5">go to myVue5 </button>
       <button class="btn btnMyVue" @click="goMyVue6">go to myVue6 </button>
+      <button class="btn btnMyVue" @click="goMyVue7">go to myVue7 </button>
     </div>
   </div>
 </template>
@@ -32,6 +33,9 @@ export default {
     },
     goMyVue6() {
       this.$router.push("/myVue6");
+    },
+    goMyVue7() {
+      this.$router.push("/myVue7");
     },
   },
 };
