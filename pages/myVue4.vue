@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Welcome to {{ myVue4 }}</h1> 
-        <button @click="goHOME">go to {{home}}</button>
+        <h1>LIST</h1> 
+        <button class="btn btnHome" @click="goHOME">HOME</button>
         <h1>{{data}}</h1>
     </div>
 </template>
@@ -12,12 +12,6 @@ import axios from "axios";
 export default {
   data() {
     return {
-      myVue1 : "myVue1",
-      myVue2 : "myVue2",
-      myVue3 : "myVue3",
-      myVue4 : "myVue4",
-      myVue5 : "myVue5",
-      home : "HOME",
       data : ""
     };
   },
@@ -35,3 +29,25 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.btn {
+  text-decoration: none;
+  padding: 20px 20px;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.btnHome {
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(143, 64, 648, 0.5),10px -10px 25px 0 rgba(39, 200, 255, 0.5);
+}
+
+.btnHome:hover {
+  cursor: pointer;
+  transform: translateY(-0.25em);
+}
+</style>
