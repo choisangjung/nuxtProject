@@ -1,28 +1,19 @@
 <template>
   <div>
-    <h1>{{ main }}</h1><br><br>
+    <h1>NUXT.js</h1><br><br>
     <div>
-      <button class="btn btnMyVue" @click="goMyVue1">go to {{ myVue1 }}</button>
-      <button class="btn btnMyVue" @click="goMyVue2">go to {{ myVue2 }}</button>
-      <button class="btn btnMyVue" @click="goMyVue3">go to {{ myVue3 }}</button>
-      <button class="btn btnMyVue" @click="goMyVue4">go to {{ myVue4 }}</button>
-      <button class="btn btnMyVue" @click="goMyVue5">go to {{ myVue5 }}</button>
+      <button class="btn btnMyVue" @click="goMyVue1">go to myVue1 </button>
+      <button class="btn btnMyVue" @click="goMyVue2">go to myVue2 </button>
+      <button class="btn btnMyVue" @click="goMyVue3">go to myVue3 </button>
+      <button class="btn btnMyVue" @click="goMyVue4">go to myVue4 </button>
+      <button class="btn btnMyVue" @click="goMyVue5">go to myVue5 </button>
+      <button class="btn btnMyVue" @click="goMyVue6">go to myVue6 </button>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      myVue1: "myVue1",
-      myVue2: "myVue2",
-      myVue3: "myVue3",
-      myVue4: "myVue4",
-      myVue5: "myVue5",
-      main: "NUXT.js",
-    };
-  },
+export default {  
   methods: {
     goMyVue1() {
       this.$router.push("/myVue1");
@@ -38,6 +29,9 @@ export default {
     },
     goMyVue5() {
       this.$router.push("/myVue5");
+    },
+    goMyVue6() {
+      this.$router.push("/myVue6");
     },
   },
 };
