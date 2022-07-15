@@ -2,10 +2,13 @@
     <div>
         <h1>Welcome to {{ myVue3 }}</h1>
         <button @click="goHOME">go to {{home}}</button>
-        <h1>{{connectData}}</h1>
+        <h1>({{connectData}})</h1>
     </div>
 </template>
 <script>
+
+import axios from "axios";
+
 export default {
   data() {
     return {
@@ -22,14 +25,13 @@ export default {
     goHOME(){
     this.$router.push("/");
     },
-    get() {
-      this.axios.get("http://localhost:3080/TESTLIST2").then((response) => {
-        this.connectData = response.data;
-      });
-    },
+    async fetchThing() {
+      const response = await axios.get('http://localhost:3080/api/TESTLIST2')
+      this.connectData = response.data;
+    }
   },
-  mounted() {
-    this.get();
-  },
+  created() {
+    this.fetchThing();
+  }
 };
 </script>

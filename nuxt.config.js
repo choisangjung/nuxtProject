@@ -18,8 +18,7 @@ export default {
       port: 3000
     },
     module: [
-      '@nuxtjs/axios',
-      '@nuxtjs/proxy'
+      '@nuxtjs/axios'
     ],
     axios: {
       proxy: true
@@ -27,7 +26,8 @@ export default {
     proxy: {
       '/api/': {
         target: 'http://localhost:3080',
-        changeOrigin: true, // cross origin 허용
+        pathRewrite : { "^/api/":""},
+        changeOrigin: true // cross origin 허용
       }
     }
   },
